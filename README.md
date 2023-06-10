@@ -5,11 +5,11 @@ Making a Pokemon inventory for all those die-hard fans. Let's go! <br>
 <h2>Deployment</h2>
 To deploy the site, clone repo on your machine. Go to the repository root directory and run the development server with either of the following commands: <br>
 
-``` <br>
-npm run dev <br>
-# or <br>
-yarn run <br>
-``` <br>
+``` 
+npm run dev
+# or
+yarn run
+``` 
 
 Open http://localhost:3000 with your browser to see the result. <br>
 You can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file. <br>
