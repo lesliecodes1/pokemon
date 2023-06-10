@@ -1,6 +1,6 @@
 "use client";
 
-import Head from "next/head";
+//import Head from "next/head";
 import styles from "../styles/characters.module.css";
 import React, { useState, useEffect } from "react";
 
@@ -19,7 +19,7 @@ export default function Characters() {
 
   return (
     <div>
-      <Head>Explore your character!</Head>
+      <h1>Explore your character!</h1>
       <div>{JSON.stringify(pokemon)}</div>
     </div>
   );
