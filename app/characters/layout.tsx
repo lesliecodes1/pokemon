@@ -1,6 +1,6 @@
-import styles from "../styles/characters.module.css";
-import { Inter } from "next/font/google";
 import Link from "next/link";
+import { Inter } from "next/font/google";
+import styles from "../../styles/characters.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-      <Link href="/">Go Home</Link>
-    </html>
+    <div>
+      <html lang="en">
+        <body>{children}</body>
+        <Link legacyBehavior href="/">
+          <a>Home</a>
+        </Link>
+      </html>
+    </div>
   );
 }
