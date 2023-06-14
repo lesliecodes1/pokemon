@@ -6,7 +6,9 @@ import styles from "../../styles/characters.module.css";
 import Link from "next/link";
 
 export default function Characters() {
-  const [pokemon, setPokemon] = useState([]);
+  const [pokemon, setPokemon] = useState<
+    Array<{ id: number; name: string; image: string }>
+  >([]);
 
   useEffect(() => {
     async function getPokemon() {
@@ -19,14 +21,14 @@ export default function Characters() {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div>
       <div className={styles.eight}>
         <h1>Explore your Character!</h1>
       </div>
       <div className={styles.grid}>
         {pokemon.map((pokemon) => (
           <div className={styles.card} key={pokemon.id}>
-            <Link legacyBehavior href={`/details/${pokemon.id}`}>
+            <Link legacyBehavior href={`../details/${pokemon.id}`}>
               <a>
                 <img
                   src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
