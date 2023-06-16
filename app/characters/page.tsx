@@ -9,6 +9,10 @@ export default function Characters() {
   const [pokemon, setPokemon] = useState<
     Array<{ id: number; name: string; image: string }>
   >([]);
+  const [searchInput, setSearchInput] = useState("");
+  const [searchResults, setSearchResults] = useState<
+    Array<{ id: number; name: string; image: string }>
+  >([]);
 
   useEffect(() => {
     async function getPokemon() {
@@ -27,6 +31,8 @@ export default function Characters() {
           placeholder="find character"
           className={styles.input}
           name="text"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
         />
         <Link legacyBehavior href="/">
           <a className={styles.fancy}>
