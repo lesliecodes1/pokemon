@@ -3,19 +3,34 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1>Hello Pokemon World</h1>
-      <div className={styles.bar}>
-        <div className={styles.ball}></div>
+    <main>
+      <div>
+        <nav className={styles.navbar}>
+          <a href="#" className="logo">
+            <h1>
+              <span>Hello </span>
+              <span>Pokemon </span>
+              <span>World</span>
+            </h1>
+          </a>
+        </nav>
       </div>
-      <Link legacyBehavior href="/characters">
-        <a className={styles.fancy}>
-          <span className={styles.topkey}></span>
-          <span className={styles.text}>Characters</span>
-          <span className={styles.bottomkey1}></span>
-          <span className={styles.bottomkey2}></span>
-        </a>
-      </Link>
+      <section className={styles.main}>
+        <div className={styles.bar}>
+          <div className={styles.ball}></div>
+        </div>
+      </section>
+      <div className={styles.main}>
+        <Link legacyBehavior href="/characters">
+          <a className={styles.fancy}>
+            <span className={styles.topkey}></span>
+            <span className={styles.text}>Characters</span>
+            <span className={styles.bottomkey1}></span>
+            <span className={styles.bottomkey2}></span>
+          </a>
+        </Link>
+        <Link href="/details">details page</Link>
+      </div>
     </main>
   );
 }

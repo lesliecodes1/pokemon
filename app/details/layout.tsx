@@ -1,21 +1,21 @@
-import Link from "next/link";
 import "@fontsource/inter";
+import Link from "next/link";
 import styles from "../../styles/page.module.css";
 
 export const metadata = {
-  title: "Characters",
+  title: "Details",
   description: "Created by Leslie",
 };
 
-export default function RootLayout({
+export default function DetailsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <div>
-      <div className={styles.returnButton}>
-        <Link legacyBehavior href="/">
+      <div>
+      <Link legacyBehavior href="/">
           <a className={styles.fancy}>
             <span className={styles.topkey}></span>
             <span className={styles.text}>Return</span>
@@ -25,7 +25,7 @@ export default function RootLayout({
         </Link>
       </div>
       <div>{children}</div>
-      <div className={styles.homeButton}>
+      <div>
         <Link legacyBehavior href="/">
           <a className={styles.fancy}>
             <span className={styles.topkey}></span>
