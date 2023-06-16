@@ -10,9 +10,9 @@ export default function Characters() {
     Array<{ id: number; name: string; image: string }>
   >([]);
   const [searchInput, setSearchInput] = useState("");
-  const [searchResults, setSearchResults] = useState<
-    Array<{ id: number; name: string; image: string }>
-  >([]);
+  // const [searchResults, setSearchResults] = useState<
+  //   Array<{ id: number; name: string; image: string }>
+  // >([]);
 
   useEffect(() => {
     async function getPokemon() {
@@ -23,6 +23,12 @@ export default function Characters() {
     }
     getPokemon();
   }, []);
+
+  const filteredPokemon = pokemon.filter(
+    (p) =>
+      p.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+      p.id.toString().includes(searchInput)
+  );
 
   return (
     <div>
@@ -47,19 +53,39 @@ export default function Characters() {
         <h1>Explore your Character!</h1>
       </div>
       <div className={styles.grid}>
-        {pokemon.map((pokemon) => (
-          <div className={styles.card} key={pokemon.id}>
-            <Link legacyBehavior href={`../details/${pokemon.id}`}>
-              <a>
-                <img
-                  src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
-                  alt={pokemon.name}
-                />
-                <h3>{pokemon.name}</h3>
-              </a>
-            </Link>
-          </div>
-        ))}
+        {searchInput !== "" ? (
+          filteredPokemon.length > 0 ? (
+            filteredPokemon.map((pokemon) => (
+              <div className={styles.card} key={pokemon.id}>
+                <Link legacyBehavior href={`../details/${pokemon.id}`}>
+                  <a>
+                    <img
+                      src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
+                      alt={pokemon.name}
+                    />
+                    <h3>{pokemon.name}</h3>
+                  </a>
+                </Link>
+              </div>
+            ))
+          ) : (
+            <p>No results found.</p>
+          )
+        ) : (
+          pokemon.map((pokemon) => (
+            <div className={styles.card} key={pokemon.id}>
+              <Link legacyBehavior href={`../details/${pokemon.id}`}>
+                <a>
+                  <img
+                    src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
+                    alt={pokemon.name}
+                  />
+                  <h3>{pokemon.name}</h3>
+                </a>
+              </Link>
+            </div>
+          ))
+        )}
       </div>
       <div>
         <Link legacyBehavior href="/">
