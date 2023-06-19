@@ -1,7 +1,8 @@
 import "../styles/globals.css";
 import "@fontsource/inter";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Pokemon Lovers",
   description: "Created by Leslie",
 };

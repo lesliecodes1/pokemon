@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <div>
         <nav className={styles.navbar}>
-          <a href="#" className="logo">
+          <a href="/">
             <h1>
               <span>Hello </span>
               <span>Pokemon </span>
@@ -29,7 +29,6 @@ export default function Home() {
             <span className={styles.bottomkey2}></span>
           </a>
         </Link>
-        <Link href="/details">details page</Link>
       </div>
     </main>
   );

@@ -2,7 +2,7 @@ import "@fontsource/inter";
 
 export const metadata = {
   title: "Characters",
-  description: "Created by Leslie",
+  description: "Explore your character",
 };
 
 export default function CharactersLayout({

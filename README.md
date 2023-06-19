@@ -2,7 +2,7 @@
 
 Making a Pokemon inventory for all those die-hard fans. Let's go! <br>
 
-<h2>Deployment</h2>
+<h2>To Set up Locally</h2>
 To deploy the site, go to the repository root directory and run the development server with either of the following commands: <br>
 
 ```
