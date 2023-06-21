@@ -15,11 +15,6 @@ export default function Home() {
           </a>
         </nav>
       </div>
-      <section className={styles.main}>
-        <div className={styles.bar}>
-          <div className={styles.ball}></div>
-        </div>
-      </section>
       <div className={styles.main}>
         <Link legacyBehavior href="/characters">
           <a className={styles.fancy}>

@@ -54,7 +54,7 @@ export default function Characters() {
           filteredPokemon.length > 0 ? (
             filteredPokemon.map((pokemon) => (
               <div className={styles.card} key={pokemon.id}>
-                <Link legacyBehavior href={`./[id]/${pokemon.id}`}>
+                <Link legacyBehavior href={`./id/${pokemon.id}`}>
                   <a>
                     <img
                       src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
