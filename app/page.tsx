@@ -48,7 +48,7 @@ export default function Home() {
         above, our website is your one-stop destination for all things Pokémon.
         Prepare to embark on an extraordinary adventure, make lifelong friends,
         and experience the magic that has captured the hearts of millions of
-        trainers worldwide.
+        Pokémon lovers worldwide.
       </section>
     </main>
   );
