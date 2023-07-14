@@ -71,7 +71,7 @@ export default function Characters() {
         ) : (
           pokemon.map((pokemon) => (
             <div className={styles.card} key={pokemon.id}>
-              <Link legacyBehavior href={`./id/${pokemon.id}`}>
+              <Link legacyBehavior href={`./details/${pokemon.id}`}>
                 <a>
                   <img
                     src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
